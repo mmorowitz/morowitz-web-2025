@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Product Manager</title>
+    <meta name="description" content="Senior Product Manager specializing in user research, data-driven decisions, and cross-functional collaboration. Building products that solve complex problems for customers.">
+    <meta name="keywords" content="product manager, senior product manager, user research, data-driven, product development, cross-functional collaboration">
+    <meta name="author" content="Your Name">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #e0e0e0;
+            background-color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .hero-section {
+            background-color: #1a1a1a;
+            padding: 80px 20px 60px;
+            text-align: left;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 30px;
+            background-color: #333;
+            background-image: url('your-photo.jpg');
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #4a90e2;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            color: #666;
+        }
+        
+        .name-title {
+            flex: 1;
+        }
+        
+        .timeline-section {
+            background-color: #222222;
+            padding: 60px 20px;
+        }
+        
+        .about-section {
+            background-color: #1a1a1a;
+            padding: 60px 20px;
+        }
+        
+        .links-section {
+            background-color: #1e1e1e;
+            padding: 50px 20px 80px;
+        }
+        
+        h1 {
+            font-size: 2.4em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            color: #b0b0b0;
+            margin-bottom: 0;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #d0d0d0;
+            margin-bottom: 24px;
+        }
+        
+        .section h2 {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section p {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #d0d0d0;
+            margin-bottom: 16px;
+        }
+        
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            margin: 40px 0;
+            padding: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #4a90e2;
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            height: 80px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+        
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        
+        .timeline-content {
+            position: absolute;
+            width: 45%;
+            top: 0;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            right: 55%;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            left: 55%;
+            text-align: left;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background-color: #4a90e2;
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .job-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        
+        .company {
+            font-size: 1em;
+            color: #b0b0b0;
+            margin-bottom: 4px;
+        }
+        
+        .location {
+            font-size: 0.9em;
+            color: #888;
+        }
+        
+        .links a {
+            display: block;
+            margin-bottom: 16px;
+            font-size: 1.1em;
+            text-decoration: none;
+            color: #66b3ff;
+            transition: color 0.2s ease;
+        }
+        
+        .links a:hover {
+            color: #99ccff;
+        }
+        
+        .emoji {
+            margin-right: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .hero-section, .timeline-section, .about-section, .links-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-photo {
+                width: 100px;
+                height: 100px;
+                margin-right: 0;
+                margin-bottom: 25px;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item {
+                height: auto;
+                padding-left: 40px;
+                margin-bottom: 30px;
+            }
+            
+            .timeline-content {
+                position: static !important;
+                width: 100% !important;
+                text-align: left !important;
+                padding: 0;
+            }
+            
+            .timeline-dot {
+                left: 14px !important;
+                transform: none !important;
+                top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-section">
+        <div class="container">
+            <div class="header-content">
+                <div class="profile-photo">👤</div>
+                <div class="name-title">
+                    <h1>Your Name</h1>
+                    <div class="subtitle">Senior Product Manager</div>
+                </div>
+            </div>
+            
+            <div class="intro">
+                <p>👋 Hi, I'm [Your Name] and I live in [Your City]. I'm a Senior Product Manager at [Your Company] where I build products that solve complex problems for customers.</p>
+                
+                <p>🚀 I specialize in user research, data-driven decisions, and cross-functional collaboration. Previously, I've worked at [Previous Companies] focusing on scaling digital platforms.</p>
+                
+                <p>💡 I'm passionate about creating experiences that genuinely improve people's work and lives.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="timeline-section">
+        <div class="container">
+            <div class="section">
+                <h2>Work experience for the last eight years</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="job-title">Senior Product Manager</div>
+                            <div class="company">Current Company</div>
+                            <div class="location">City, Country</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="job-title">Product Manager</div>
+                            <div class="company">Previous Company</div>
+                            <div class="location">City, Country</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="job-title">Associate Product Manager</div>
+                            <div class="company">Another Company</div>
+                            <div class="location">City, Country</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <div class="job-title">Business Analyst</div>
+                            <div class="company">First Company</div>
+                            <div class="location">City, Country</div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="about-section">
+        <div class="container">
+            <div class="section">
+                <h2>What I Do</h2>
+                <p>I help teams build products that users actually want. This means spending time understanding customer problems, analyzing data to validate hypotheses, and working closely with design and engineering to ship solutions.</p>
+                <p>My approach combines [your methodology] with a focus on measurable outcomes and user satisfaction.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="links-section">
+        <div class="container">
+            <div class="links">
+                <a href="mailto:your@email.com"><span class="emoji">📧</span>Get in touch</a>
+                <a href="https://linkedin.com/in/yourprofile"><span class="emoji">💼</span>Connect on LinkedIn</a>
+                <a href="#"><span class="emoji">📁</span>View my work</a>
+                <a href="#"><span class="emoji">✍️</span>Read my thoughts</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
