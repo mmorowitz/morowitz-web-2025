@@ -17,9 +17,3 @@ A clean, minimal personal landing page for a senior product manager. Designed wi
 3. **About Section** - What you do description
 4. **Links Section** - Contact and social links
 
-## Customization
-
-### Adding Your Photo
-Replace `your-photo.jpg` in the CSS with your image path:
-```css
-background-image: url('path/to/your-photo.jpg');
