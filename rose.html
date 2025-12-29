@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>[Project Name] - Michael Morowitz</title>
+        <meta
+            name="description"
+            content="The Cosmopolitan of Las Vegas | Rose, The Hotel Chatbot"
+        />
+        <meta name="author" content="Michael Morowitz" />
+        <link rel="canonical" href="https://morowitz.com/rose.html" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://morowitz.com/rose.html" />
+        <meta
+            property="og:title"
+            content="The Cosmopolitan of Las Vegas | Rose, The Hotel Chatbot - Michael Morowitz"
+        />
+        <meta
+            property="og:description"
+            content="A first of its kind digital hotel concierge"
+
+        <script
+            data-goatcounter="https://mmorowitz.goatcounter.com/count"
+            async
+            src="//gc.zgo.at/count.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        />
+        <style>
+            :root {
+                /* Background Colors */
+                --bg-primary: #1a1a1a;
+                --bg-secondary: #222222;
+                --bg-tertiary: #1e1e1e;
+                --bg-accent: #333;
+
+                /* Text Colors */
+                --text-primary: #ffffff;
+                --text-secondary: #e0e0e0;
+                --text-muted: #d0d0d0;
+                --text-light: #b0b0b0;
+                --text-subtle: #888;
+
+                /* Accent Colors - WCAG AA compliant */
+                --accent-blue: #4a90e2;
+                --accent-blue-light: #5fa3ff;
+                --accent-blue-lighter: #7db8ff;
+
+                /* Link Colors */
+                --link-primary: #ffa726;
+                --link-hover: #ffcc80;
+
+                /* Border & Shadow Colors */
+                --border-accent: #4a90e2;
+                --shadow-dark: rgba(0, 0, 0, 0.3);
+            }
+
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+                    sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+                    "Segoe UI Symbol";
+                line-height: 1.6;
+                color: #e0e0e0;
+                color: var(--text-secondary);
+                background-color: #1a1a1a;
+                background-color: var(--bg-primary);
+                margin: 0;
+                padding: 0;
+            }
+
+            .container {
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            .wide-container {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Navigation */
+            .nav-section {
+                background-color: var(--bg-tertiary);
+                padding: 20px;
+                border-bottom: 1px solid var(--bg-accent);
+            }
+
+            .back-link {
+                font-size: 1em;
+                color: var(--text-primary);
+                text-decoration: none;
+                font-weight: 600;
+                -webkit-transition: color 0.2s ease;
+                -moz-transition: color 0.2s ease;
+                -ms-transition: color 0.2s ease;
+                transition: color 0.2s ease;
+            }
+
+            .back-link:hover {
+                color: var(--link-primary);
+            }
+
+            .back-link::before {
+                content: "← ";
+            }
+
+            /* Hero Section */
+            .hero-section {
+                background-color: var(--bg-primary);
+                padding: 80px 20px 60px;
+            }
+
+            .project-header {
+                margin-bottom: 40px;
+            }
+
+            h1 {
+                font-size: 2.4em;
+                font-weight: 700;
+                margin-bottom: 16px;
+                color: var(--text-primary);
+                line-height: 1.2;
+            }
+
+            .project-tagline {
+                font-size: 1.2em;
+                color: var(--text-light);
+                line-height: 1.5;
+                margin-bottom: 24px;
+            }
+
+            .project-meta {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .meta-item {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+            .meta-label {
+                font-size: 0.85em;
+                color: var(--text-subtle);
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 4px;
+            }
+
+            .meta-value {
+                font-size: 1.05em;
+                color: var(--text-primary);
+                font-weight: 600;
+            }
+
+            /* Content Sections */
+            .content-section {
+                padding: 60px 20px;
+            }
+
+            .content-section.bg-secondary {
+                background-color: var(--bg-secondary);
+            }
+
+            .content-section.bg-primary {
+                background-color: var(--bg-primary);
+            }
+
+            .section h2 {
+                font-size: 1.8em;
+                font-weight: 600;
+                color: var(--text-primary);
+                margin-bottom: 30px;
+            }
+
+            .section h3 {
+                font-size: 1.3em;
+                font-weight: 600;
+                color: var(--text-primary);
+                margin-top: 40px;
+                margin-bottom: 16px;
+            }
+
+            .section p {
+                font-size: 1.05em;
+                line-height: 1.7;
+                color: var(--text-muted);
+                margin-bottom: 16px;
+            }
+
+            .section ul,
+            .section ol {
+                font-size: 1.05em;
+                line-height: 1.7;
+                color: var(--text-muted);
+                margin-bottom: 24px;
+                padding-left: 24px;
+            }
+
+            .section li {
+                margin-bottom: 12px;
+            }
+
+            .section strong {
+                color: var(--text-primary);
+                font-weight: 600;
+            }
+
+            /* Highlight Box */
+            .highlight-box {
+                background-color: var(--bg-tertiary);
+                border-left: 3px solid var(--accent-blue);
+                padding: 24px;
+                border-radius: 6px;
+                margin: 30px 0;
+            }
+
+            .highlight-box p {
+                margin-bottom: 8px;
+            }
+
+            .highlight-box p:last-child {
+                margin-bottom: 0;
+            }
+
+            /* Stats Grid */
+            .stats-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 32px;
+                margin: 50px 0;
+            }
+
+            .stat-card {
+                background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-accent) 100%);
+                padding: 40px 30px;
+                border-radius: 12px;
+                border: 1px solid rgba(74, 144, 226, 0.2);
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+                -webkit-transition: all 0.3s ease;
+                -moz-transition: all 0.3s ease;
+                -ms-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+            }
+
+            .stat-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-blue-lighter) 100%);
+            }
+
+            .stat-card:hover {
+                -webkit-transform: translateY(-4px);
+                -moz-transform: translateY(-4px);
+                -ms-transform: translateY(-4px);
+                transform: translateY(-4px);
+                box-shadow: 0 12px 24px rgba(74, 144, 226, 0.15);
+                border-color: rgba(74, 144, 226, 0.4);
+            }
+
+            .stat-label {
+                font-size: 1em;
+                color: var(--text-light);
+                line-height: 1.4;
+                margin-bottom: 16px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+            }
+
+            .stat-value {
+                font-size: 3.5em;
+                font-weight: 800;
+                background: linear-gradient(135deg, var(--accent-blue-light) 0%, var(--accent-blue-lighter) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin-bottom: 0;
+                line-height: 1.1;
+            }
+
+            /* Video Container */
+            .video-section {
+                background-color: var(--bg-secondary);
+                padding: 60px 20px;
+            }
+
+            .video-container {
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 aspect ratio */
+                height: 0;
+                overflow: hidden;
+                max-width: 100%;
+                background: var(--bg-tertiary);
+                border-radius: 6px;
+                box-shadow: 0 4px 12px var(--shadow-dark);
+            }
+
+            .video-container iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: 0;
+            }
+
+            /* Image Container */
+            .image-container {
+                margin: 40px 0;
+                text-align: center;
+            }
+
+            .image-container img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 6px;
+                border: 1px solid var(--bg-accent);
+                box-shadow: 0 4px 12px var(--shadow-dark);
+            }
+
+            .image-caption {
+                font-size: 0.9em;
+                color: var(--text-subtle);
+                margin-top: 12px;
+                font-style: italic;
+            }
+
+            /* Key Takeaways List */
+            .takeaways-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .takeaways-list li {
+                background: var(--bg-tertiary);
+                padding: 16px 20px;
+                border-left: 3px solid var(--accent-blue);
+                margin-bottom: 16px;
+                border-radius: 4px;
+            }
+
+            .takeaways-list li::before {
+                content: "✓ ";
+                color: var(--accent-blue-light);
+                font-weight: 700;
+                margin-right: 8px;
+            }
+
+            /* General link styling */
+            a {
+                color: var(--text-primary);
+                font-weight: 600;
+                text-decoration: none;
+                -webkit-transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -ms-transition: all 0.2s ease;
+                transition: all 0.2s ease;
+            }
+
+            a:hover {
+                color: var(--link-primary);
+            }
+
+            /* Footer */
+            .footer-section {
+                background-color: var(--bg-tertiary);
+                padding: 50px 20px 30px;
+            }
+
+            .footer-links {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                gap: 40px;
+                margin-bottom: 20px;
+            }
+
+            .footer-links a {
+                font-size: 1.1em;
+            }
+
+            .footnote {
+                text-align: center;
+                padding-top: 20px;
+                font-size: 0.8em;
+                color: var(--text-subtle);
+            }
+
+            /* Focus indicators for accessibility */
+            a:focus {
+                outline: 2px solid var(--accent-blue-light);
+                outline-offset: 2px;
+            }
+
+            /* Responsive */
+            @media (max-width: 600px) {
+                .nav-section,
+                .hero-section,
+                .content-section,
+                .footer-section {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+                h1 {
+                    font-size: 2em;
+                }
+
+                .section h2 {
+                    font-size: 1.5em;
+                }
+
+                .project-meta {
+                    gap: 20px;
+                }
+
+                .stats-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .footer-links {
+                    flex-direction: column;
+                    gap: 20px;
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="nav-section">
+            <div class="container">
+                <a href="/" class="back-link">Back to home</a>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="project-header">
+                        <h1>The Cosmopolitan of Las Vegas | Rose, The Hotel Chatbot</h1>
+                        <div class="project-tagline">
+                            Years before LLMs hit the mainstream, we created a hotel chatbot that personalized guest experiences and directly impacted on-premise spend.
+                        </div>
+
+                        <div class="project-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Role</div>
+                                <div class="meta-value">Executive Technology Director</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Company</div>
+                                <div class="meta-value">R/GA</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video-section">
+                <div class="wide-container">
+                    <div class="video-container">
+                        <iframe
+                            src="https://www.youtube.com/embed/nq-8YgqVnDE"
+                            title="The Cosmopolitan of Las Vegas | Rose, The Hotel Chatbot"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Overview Section - Use bg-secondary if no video above, or bg-primary if video is included -->
+            <section class="content-section bg-primary">
+                <div class="container">
+                    <div class="section">
+                        <h2>Overview</h2>
+                        <p>
+                            The Cosmopolitan of Las Vegas was losing direct bookings to online travel agents like Expedia and Travelocity and their guests were missing out on all the resort had to offer. We built an innovative platform that creates powerful guest relationships and enhances the resort experience to encourage direct spend and return bookings. Her name is Rose: a provocative, personality-based SMS chatbot, the hotel's "resident mischief-maker" and the first digital concierge in Las Vegas. As R/GA's Executive Technology Director, I co-led the ideation, pitch process, C-suite collaboration, product development, and launch of Rose.
+                        </p>
+                        <div class="highlight-box">
+                            <p>
+                                <strong>Key Objective:</strong> Increase on-premise guest spend and direct bookings.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Challenge/Problem Section -->
+            <section class="content-section bg-secondary">
+                <div class="container">
+                    <div class="section">
+                        <h2>The Challenge</h2>
+                        <p>
+                            A high percentage of Las Vegas guests book through third-party platforms, resulting in an in-direct connection between the hotel and the guest. The Cosmopolitan was looking for an innovative new solution to help build a direct line between their wide array of services and their guests. The goal was to enhance satisfaction, spend, loyalty, and build a new data source.
+                        </p>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Approach/Solution Section -->
+            <section class="content-section bg-primary">
+                <div class="container">
+                    <div class="section">
+                        <h2>The Approach</h2>
+                        <p>
+                            Utilizing new software, existing platforms, and a lot of on-site testing, in 12 weeks, R/GA designed, developed, and launched a SMS chatbot with a sassy personality that connected guests to a wide array of automated information, live customer service, and personalized recommendations.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results/Impact Section -->
+            <section class="content-section bg-secondary">
+                <div class="container">
+                    <div class="section">
+                        <h2>Impact & Results</h2>
+                        <p>
+                            Rose users correlated to a 20% increase in on-premise spend. Additionally, the chatbot helped alleviate a number of challenges with the guest services teams. Finally, Rose became a post-checkout experience, driving loyalty and repeat bookings. Launched in late 2016, Rose remains a cornerstone of The Cosmopolitan's digital product portfolio.
+                        </p>
+
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-label">
+                                    Guest satisfaction
+                                </div>
+                                <div class="stat-value">+33%</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">
+                                    Direct bookings
+                                </div>
+                                <div class="stat-value">+37%</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">
+                                    On-premise spend
+                                </div>
+                                <div class="stat-value">+20%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Key Takeaways Section -->
+            <section class="content-section bg-primary">
+                <div class="container">
+                    <div class="section">
+                        <h2>Key Takeaways</h2>
+                        <ul class="takeaways-list">
+                            <li>Speed to market: A product in customer hands has exponentially more value than a product in development.</li>
+                            <li>Iterative improvements from "desire paths": Utilize customer usage patterns to inform where to direct development.</li>
+                            <li>Meet the customer where they are: Launching via SMS removed barriers and drove adoption quickly.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-section">
+            <div class="container">
+                <div class="footer-links">
+                    <a href="/" aria-label="Return to home page">Home</a>
+                    <a
+                        href="mailto:hello@morowitz.com"
+                        aria-label="Send email to get in touch"
+                        >Get in touch</a
+                    >
+                    <a
+                        href="https://linkedin.com/in/mmorowitz"
+                        aria-label="Connect on LinkedIn profile"
+                        >LinkedIn</a
+                    >
+                </div>
+                <div class="footnote">
+                    Built with Claude Code using only my voice
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

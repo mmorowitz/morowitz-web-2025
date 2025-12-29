@@ -16,4 +16,3 @@ A clean, minimal personal landing page for a senior product manager. Designed wi
 2. **Timeline Section** - Work experience with visual timeline
 3. **About Section** - What you do description
 4. **Links Section** - Contact and social links
-
