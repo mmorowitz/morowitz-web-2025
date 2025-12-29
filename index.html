@@ -263,6 +263,49 @@
                 margin-bottom: 24px;
             }
 
+            .intro-expanded {
+                display: none;
+            }
+
+            #intro-toggle {
+                display: none;
+            }
+
+            #intro-toggle:checked ~ .intro-expanded {
+                display: block;
+            }
+
+            #intro-toggle:checked ~ .intro-toggle-label .toggle-text-more {
+                display: none;
+            }
+
+            #intro-toggle:checked ~ .intro-toggle-label .toggle-text-less {
+                display: inline;
+            }
+
+            .intro-toggle-label {
+                color: var(--link-primary);
+                font-size: 1em;
+                font-weight: 600;
+                cursor: pointer;
+                display: block;
+                text-align: center;
+                margin-top: -16px;
+                margin-bottom: 24px;
+                -webkit-transition: color 0.2s ease;
+                -moz-transition: color 0.2s ease;
+                -ms-transition: color 0.2s ease;
+                transition: color 0.2s ease;
+            }
+
+            .intro-toggle-label:hover {
+                color: var(--link-hover);
+            }
+
+            .toggle-text-less {
+                display: none;
+            }
+
             .section h2 {
                 font-size: 1.3em;
                 font-weight: 600;
@@ -701,33 +744,68 @@
 
                     <div class="intro">
                         <p>
-                            I'm Michael Morowitz and I live in Chicago. As a
-                            digital product leader, I specialize in product
-                            innovation—solving complex business problems by
-                            building products that customers want to use.
+                            I help companies unlock growth from the inside out.
                         </p>
 
-                        <p>
-                            I lead teams across product management, engineering,
-                            research, and design. My experience spans AI-powered
-                            business solutions, customer experience innovation,
-                            data platforms, commerce solutions and digital
-                            marketing.
-                        </p>
+                        <input type="checkbox" id="intro-toggle" />
+                        <label for="intro-toggle" class="intro-toggle-label">
+                            <span class="toggle-text-more">Read more</span>
+                            <span class="toggle-text-less">Read less</span>
+                        </label>
 
-                        <p>
-                            I am an experienced teacher, mentor, manager, and
-                            public speaker. I'm passionate about helping others
-                            move their careers forward.
-                        </p>
-
-                        <p>
-                            I am currently the Senior Director of Digital
-                            Product at
-                            <a href="https://homechef.com">Home Chef</a>, a
-                            Kroger subsidiary and a top direct-to-consumer meal
-                            solutions provider.
-                        </p>
+                        <div class="intro-expanded">
+                            <p>
+                                On the consulting side, I've helped industry
+                                leaders across hospitality, retail, and CPG turn
+                                dormant assets into products. On the brand side,
+                                I've done the same thing from the inside,
+                                managing budgets, competing priorities, legacy
+                                systems, and quarterly targets.
+                            </p>
+                            <p>
+                                That combination means I can spot the growth
+                                hiding inside an organization and actually ship
+                                it. I specialize in turning under-leveraged
+                                assets into products and platforms that create
+                                customer value. Data sitting in silos, processes
+                                that could be productized, partner networks that
+                                aren't connected to anything. I find those
+                                opportunities, build the connective tissue, and
+                                apply AI where it actually moves the needle.
+                            </p>
+                            <p>
+                                I've built conversational platforms, enterprise
+                                personalization engines, API integration layers
+                                from the ground up, and much more. I've led
+                                AI-driven product work years before the current
+                                wave and created practices around it that scaled
+                                across multiple clients.
+                            </p>
+                            <p>
+                                None of this happens alone. I build teams that
+                                can move at the pace of the market, develop
+                                talent, and collaborate across product,
+                                engineering, design, and data.
+                            </p>
+                            <p>
+                                Where most executives get 2-3 big swings in a
+                                decade, I've seen 20-30. That pattern
+                                recognition is what I bring to the table.
+                            </p>
+                            <p>
+                                I'm always up for connecting with people
+                                thinking about product innovation, platform
+                                strategy, or unlocking growth from existing
+                                assets. Reach out if any of that resonates.
+                            </p>
+                            <p>
+                                I am currently the Senior Director of Digital
+                                Product at
+                                <a href="https://homechef.com">Home Chef</a> in
+                                Chicago, IL, a Kroger subsidiary and a top
+                                direct-to-consumer meal solutions provider.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
