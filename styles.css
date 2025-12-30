@@ -1,0 +1,98 @@
+/* Shared styles for morowitz.com */
+
+:root {
+    /* Background Colors */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #222222;
+    --bg-tertiary: #1e1e1e;
+    --bg-accent: #333;
+
+    /* Text Colors */
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #d0d0d0;
+    --text-light: #b0b0b0;
+    --text-subtle: #888;
+
+    /* Accent Colors - WCAG AA compliant */
+    --accent-blue: #4a90e2;
+    --accent-blue-light: #5fa3ff;
+    --accent-blue-lighter: #7db8ff;
+
+    /* Link Colors */
+    --link-primary: #ffa726;
+    --link-hover: #ffcc80;
+
+    /* Border & Shadow Colors */
+    --border-accent: #4a90e2;
+    --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+        "Segoe UI Symbol";
+    line-height: 1.6;
+    color: #e0e0e0;
+    color: var(--text-secondary);
+    background-color: #1a1a1a;
+    background-color: var(--bg-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.wide-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* General link styling */
+a {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-primary);
+}
+
+/* Focus indicators for accessibility */
+a:focus {
+    outline: 2px solid var(--accent-blue-light);
+    outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav-section,
+    .hero-section,
+    .content-section,
+    .footer-section,
+    .ideas-section,
+    .timeline-section,
+    .about-section,
+    .links-section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+}
